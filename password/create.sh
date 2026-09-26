@@ -22,7 +22,7 @@ while true; do
     stored_hash=$(printf "%s" "$passwd" |openssl passwd -6 -stdin)
   
 
-    printf "%s/%s\n" "${user}"/"${stored_hash}" >> pass-data.txt
+    printf "%s/%s\n" "${user}" "${stored_hash}" >> pass-data.txt
         printf "%s\n" "Success!"
         break
 done
